@@ -14,6 +14,7 @@ import Leadership from "./components/Leadership";
 import CompanyValues from "./components/CompanyValues";
 import Footer from "./components/Footer";
 
+import harvionixLogo from "./assets/images/harvionix_logo_1780640461112.png";
 import { ArrowDown, Cpu, Sparkles, ChevronRight, CheckCircle, ArrowUpRight } from "lucide-react";
 
 export default function App() {
@@ -98,7 +99,7 @@ export default function App() {
             {/* Real Logo image from generated asset */}
             <div className="w-[88%] h-[88%] rounded-full overflow-hidden border border-white/10 flex items-center justify-center bg-black/80 relative">
               <img
-                src="/src/assets/images/harvionix_logo_1780640461112.png"
+                src={harvionixLogo}
                 alt="HARVIONIX Gold-and-Black Winged Corporate Crest Logo"
                 className="w-full h-full object-contain rounded-full opacity-90 scale-95 hover:scale-100 transition-transform duration-700"
                 referrerPolicy="no-referrer"

@@ -4,6 +4,7 @@
  */
 
 import InteractiveGlobe from "./InteractiveGlobe";
+import transformImage from "../assets/images/harvionix_tech_transform_1780640479807.png";
 import { Compass, Eye, Shield, Target, Award, ArrowRight } from "lucide-react";
 
 export default function WhoWeAre() {
@@ -37,7 +38,7 @@ export default function WhoWeAre() {
 
             <div className="overflow-hidden rounded-xl border border-white/10 aspect-[4/3] bg-zinc-950 flex items-center justify-center relative">
               <img
-                src="/src/assets/images/harvionix_tech_transform_1780640479807.png"
+                src={transformImage}
                 alt="Technology Transformation Civilization"
                 className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-1000"
                 referrerPolicy="no-referrer"

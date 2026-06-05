@@ -1,16 +1,28 @@
 # HARVIONIX
 
-A modern, interactive corporate landing page built with React, TypeScript, Vite, and Tailwind CSS.
+A modern React + Vite landing page for a technology and innovation brand. This project is designed as a polished company front page with animated hero visuals, industry showcases, service listings, leadership profiles, values, and responsive interactions.
 
-The project presents a polished brand experience for a technology-driven company, featuring an animated hero section, interactive map visuals, industry and service showcases, leadership profiles, and company value highlights.
+## Project Summary
+
+HARVIONIX is presented as a premium digital experience built using TypeScript, React, Vite, and Tailwind CSS. The app includes:
+
+- a cinematic hero section with floating capsules, holographic map visuals, and smooth scrolling
+- an interactive company profile section
+- industry-specific solution cards for agriculture, healthcare, and sustainability
+- service offerings across AI, ML, cloud, IoT, data analytics, and automation
+- project showcase cards with metrics-driven storytelling
+- leadership profiles and brand values
+- responsive layout optimized for desktop and mobile
 
 ## Key Features
 
-- Responsive React single-page application with smooth scrolling navigation
-- Cinematic animated hero layout with floating brand capsules and holographic map visuals
-- Structured company sections: Who We Are, Industries, Services, Projects, Leadership, and Values
-- Tailwind CSS styling with glassmorphism, gradient accents, and motion-friendly UI
-- Vite-powered development and build workflow for fast hot-reload and production builds
+- React 19 with TypeScript support
+- Vite development server and optimized production build
+- Tailwind CSS styling powered by `@tailwindcss/vite`
+- iconography via `lucide-react`
+- image bundling using Vite asset imports
+- polished layout with glassmorphism, gradients, and motion effects
+- component-based architecture for reusable sections
 
 ## Tech Stack
 
@@ -19,8 +31,17 @@ The project presents a polished brand experience for a technology-driven company
 - Vite
 - Tailwind CSS 4
 - Lucide React icons
-- `@vitejs/plugin-react`
-- `@tailwindcss/vite`
+- Express (dependency present for potential backend/preview workflows)
+- dotenv for environment support
+
+## Available Scripts
+
+- `npm install` — install dependencies
+- `npm run dev` — start the development server on `http://localhost:3000`
+- `npm run build` — create a production build
+- `npm run preview` — preview the production build locally
+- `npm run clean` — remove generated build files (`dist`, `server.js`)
+- `npm run lint` — run TypeScript compile checks without emitting files
 
 ## Getting Started
 
@@ -29,45 +50,95 @@ The project presents a polished brand experience for a technology-driven company
 - Node.js 18 or newer
 - npm
 
-### Install dependencies
+### Setup
 
 ```bash
 npm install
 ```
 
-### Run the development server
+### Development
 
 ```bash
 npm run dev
 ```
 
-Open the local URL displayed in the terminal to view the site.
+Open the local URL shown in the terminal to view the site.
 
-## Build for Production
+### Production Build
 
 ```bash
 npm run build
 ```
 
-Preview the production build locally:
+### Preview Production Output
 
 ```bash
 npm run preview
 ```
 
-## Project Structure
+## Folder Structure
 
-- `index.html` — application entry HTML
-- `vite.config.ts` — Vite configuration with React and Tailwind plugins
-- `package.json` — scripts and dependencies
-- `src/main.tsx` — React app bootstrap
-- `src/App.tsx` — main landing page composition and scroll behavior
-- `src/components/` — reusable sections and UI components
-- `src/assets/` — static assets and images
-- `src/index.css` — global styling entrypoint
-- `src/types.ts` — shared TypeScript definitions
-- `src/data.ts` — content data used across the page
+- `index.html` — app entry HTML template
+- `package.json` — npm scripts and dependencies
+- `tsconfig.json` — TypeScript compiler configuration
+- `vite.config.ts` — Vite configuration with React and Tailwind support
+- `src/main.tsx` — React root bootstrap
+- `src/App.tsx` — main page composition and hero section layout
+- `src/index.css` — global CSS and Tailwind imports
+- `src/vite-env.d.ts` — Vite asset module declarations for image imports
+- `src/assets/images/` — static image assets used by the site
+- `src/components/` — landing page sections and UI components
+- `src/data.ts` — content model for industries, services, projects, leadership, values, and stats
+- `src/types.ts` — shared TypeScript interfaces for app data
+
+## Component Overview
+
+The app is composed of the following main components:
+
+- `Header.tsx` — navigation bar with smooth section scrolling and mobile menu
+- `BackgroundParticles.tsx` — animated particle backdrop for the hero area
+- `InteractiveMap.tsx` — holographic world map visual in the hero section
+- `WhoWeAre.tsx` — mission and brand introduction section with imagery
+- `IndustriesGrid.tsx` — industry domain cards for Agriculture, Healthcare, and Sustainability
+- `ServicesGrid.tsx` — service offerings cards covering AI, web, mobile, cloud, IoT, and analytics
+- `ProjectShowcase.tsx` — featured projects with metrics and visual storytelling
+- `Leadership.tsx` — executive team profiles and roles
+- `CompanyValues.tsx` — corporate values and statistics visualization
+- `Footer.tsx` — footer and copyright
+
+## Data-Driven Content
+
+The page content is defined in `src/data.ts`, including:
+
+- `INDUSTRIES_DATA` — industry cards and feature points
+- `SERVICES_DATA` — service offerings and descriptions
+- `PROJECTS_DATA` — project highlights with metrics
+- `LEADERS_DATA` — leadership team details
+- `VALUES_DATA` — company values and icon names
+- `STATS_DATA` — brand statistics and growth metrics
+
+This data-driven structure makes it easy to update content without changing layout code.
 
 ## Notes
 
-This repository is designed as a visually rich corporate landing page. The current structure is well-suited for extensions such as backend integration, AI-driven content, or additional brand sections.
+- Image imports are handled through Vite asset bundling, so assets are referenced with imports rather than raw `/src/...` paths.
+- If you see stale TypeScript diagnostics after updating files, restart the editor TypeScript server or reload the window.
+- The `clean` script uses `rm -rf`, which may require Git Bash, WSL, or another Unix-compatible shell on Windows.
+
+## Customization
+
+To update copy or industry content:
+
+1. edit `src/data.ts`
+2. modify the relevant string fields, titles, and points
+3. rebuild or refresh the development server
+
+To change the page layout:
+
+- update component markup in `src/components/`
+- adjust styles in `src/index.css`
+- add new sections in `src/App.tsx`
+
+---
+
+Built as a visually rich React landing page for HARVIONIX, ready for deployment as a static site or integrated into a larger digital platform.

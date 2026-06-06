@@ -100,16 +100,10 @@ export const SERVICES_DATA: Service[] = [
     icon: "Leaf"
   },
   {
-    title: "Healthcare Technology Solutions",
+    title: "Healthcare Management Systems",
     category: "Specialized Tech",
-    description: "Deploying secure, privacy-compliant electronic health records, wearable health synchronizers, and real-time medical decision pipelines.",
-    icon: "Activity"
-  },
-  {
-    title: "Sustainability Platforms",
-    category: "Specialized Tech",
-    description: "Developing carbon accounting frameworks, renewable grid distribution managers, and local ecosystem health trackers for smart cities.",
-    icon: "Globe"
+    description: "Building HIPAA-compliant patient data platforms, AI-powered diagnostic tools, and hospital resource management systems.",
+    icon: "HeartPulse"
   }
 ];
 
@@ -226,12 +220,6 @@ export const STATS_DATA: Stat[] = [
     label: "Future Focused",
     description: "Target year for fully automated global smart networks",
     colorName: "cyan"
-  },
-  {
-    value: "28M",
-    label: "Sustainable Impact",
-    description: "Tons of resource waste systematically avoided",
-    colorName: "emerald"
   },
   {
     value: "99.9%",

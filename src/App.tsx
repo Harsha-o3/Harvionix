@@ -5,16 +5,17 @@
 
 import Header from "./components/Header";
 import BackgroundParticles from "./components/BackgroundParticles";
-import InteractiveMap from "./components/InteractiveMap";
+// import InteractiveMap from "./components/InteractiveMap";
 import WhoWeAre from "./components/WhoWeAre";
 import IndustriesGrid from "./components/IndustriesGrid";
 import ServicesGrid from "./components/ServicesGrid";
 import ProjectShowcase from "./components/ProjectShowcase";
 import Leadership from "./components/Leadership";
 import CompanyValues from "./components/CompanyValues";
+import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 
-import harvionixLogo from "./assets/images/harvionix_logo_1780640461112.png";
+import harvionixLogo from "./assets/images/harvionix_logo_1780640461111.png";
 import { ArrowDown, Cpu, Sparkles, ChevronRight, CheckCircle, ArrowUpRight } from "lucide-react";
 
 export default function App() {
@@ -64,7 +65,7 @@ export default function App() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] r-500 h-[300px] rounded-full bg-amber-500/5 blur-[120px] pointer-events-none z-10" />
         
         {/* Interactive Holographic World Map in the background */}
-        <InteractiveMap />
+        {/* <InteractiveMap /> */}
 
         {/* 3D floating element capsules surrounding the hero */}
         <div className="absolute inset-0 w-full h-full hidden md:block pointer-events-none select-none z-20">
@@ -91,26 +92,21 @@ export default function App() {
           </div>
 
           {/* Golden Winged corporate logo & glowing spotlight container */}
-          <div className="relative w-44 h-44 sm:w-52 sm:h-52 flex items-center justify-center rounded-full bg-gradient-radial from-amber-500/5 to-transparent border border-white/5 shadow-[0_0_50px_rgba(245,158,11,0.06)] group">
+          <div className="relative w-44 h-44 sm:w-52 sm:h-52 flex items-center justify-center rounded-full bg-gradient-radial from-amber-500/5 to-transparent border border-white/5 shadow-[0_0_50px_rgba(245,158,11,0.06)] group hover:shadow-[0_0_80px_rgba(245,158,11,0.15)] transition-all duration-500">
             {/* Top reflective spotlight flare */}
-            <div className="absolute -top-10 w-24 h-24 rounded-full bg-amber-400/10 blur-xl pointer-events-none animate-pulse" />
-            <div className="absolute -inset-0.5 rounded-full bg-gradient-to-tr from-amber-500/15 via-transparent to-white/10 blur-md pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-1000" />
+            <div className="absolute -top-10 w-24 h-24 rounded-full bg-amber-400/10 blur-xl pointer-events-none animate-pulse group-hover:bg-amber-400/20 transition-colors duration-500" />
+            <div className="absolute -inset-0.5 rounded-full bg-gradient-to-tr from-amber-500/15 via-transparent to-white/10 blur-md pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
             
             {/* Real Logo image from generated asset */}
             <div className="w-[88%] h-[88%] rounded-full overflow-hidden border border-white/10 flex items-center justify-center bg-black/80 relative">
               <img
                 src={harvionixLogo}
                 alt="HARVIONIX Gold-and-Black Winged Corporate Crest Logo"
-                className="w-full h-full object-contain rounded-full opacity-90 scale-95 hover:scale-100 transition-transform duration-700"
+                className="w-full h-full object-contain rounded-full opacity-90 hover:opacity-100 scale-95 hover:scale-100 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
               {/* Interactive glare */}
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out pointer-events-none" />
-            </div>
-
-            {/* Futuristic ticks overlay */}
-            <div className="absolute -bottom-2 px-2 py-0.5 rounded bg-zinc-950 border border-amber-400/30 text-[8px] font-mono text-amber-400 uppercase tracking-widest leading-none">
-              VERIFIED: AUTHENTIC_BRAND
             </div>
           </div>
 
@@ -138,7 +134,7 @@ export default function App() {
             <button
               id="hero-explore-btn"
               onClick={() => scrollToId("industries")}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider text-black bg-amber-400 hover:bg-white hover:text-black hover:shadow-[0_0_25px_rgba(245,158,11,0.4)] transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider text-black bg-gradient-to-r from-amber-400 to-amber-500 hover:from-white hover:to-amber-100 hover:text-black hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer transform hover:scale-105 active:scale-95"
             >
               Explore Solutions
               <ArrowDown className="w-3.5 h-3.5 transform group-hover:translate-y-1 transition-transform" />
@@ -147,17 +143,17 @@ export default function App() {
             <button
               id="hero-partner-btn"
               onClick={() => scrollToId("leaders")}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider text-zinc-300 hover:text-white border border-white/10 hover:border-amber-400/40 bg-white/5 hover:bg-amber-400/5 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider text-zinc-300 hover:text-white border border-white/20 hover:border-amber-400/60 bg-white/5 hover:bg-amber-400/10 hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer transform hover:scale-105 active:scale-95"
             >
               Partner With Us
-              <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-amber-400 transition-colors" />
             </button>
 
           </div>
 
           {/* Floating interactive indicator */}
-          <div className="pt-16 animate-bounce opacity-40">
-            <ArrowDown className="w-6 h-6 text-zinc-500 hover:text-amber-400 cursor-pointer" onClick={() => scrollToId("about-group")} />
+          <div className="pt-16 animate-bounce opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+            <ArrowDown className="w-6 h-6 text-zinc-500 hover:text-amber-400 transition-colors" onClick={() => scrollToId("about-group")} />
           </div>
 
         </div>
@@ -180,6 +176,9 @@ export default function App() {
 
       {/* CORPORATE VALUES AND STATS COUNTING MODULE */}
       <CompanyValues />
+
+      {/* CONTACT FORM SECTION */}
+      <ContactForm />
 
       {/* FOOTER SECTION */}
       <Footer />

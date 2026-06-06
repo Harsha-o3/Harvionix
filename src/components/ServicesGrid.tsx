@@ -89,10 +89,6 @@ export default function ServicesGrid() {
 
               {/* Card Footer Micro-detail */}
               <div className="pt-5 mt-5 border-t border-white/5 flex items-center justify-between text-[10px] font-mono text-zinc-600">
-                <span>0{idx + 1} // COMPONENT</span>
-                <span className="text-zinc-500 group-hover:text-amber-400 transition-colors">
-                  SECURE & CLOUD_SYNCED
-                </span>
               </div>
             </div>
           ))}

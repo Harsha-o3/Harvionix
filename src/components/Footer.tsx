@@ -54,10 +54,10 @@ export default function Footer() {
               Technology Domains
             </h4>
             <ul className="space-y-2.5 text-sm text-zinc-500 font-sans">
-              <li className="hover:text-amber-400 cursor-pointer transition-colors">Cognitive Agriculture</li>
-              <li className="hover:text-amber-400 cursor-pointer transition-colors">Digital Medical Telemetry</li>
-              <li className="hover:text-amber-400 cursor-pointer transition-colors">Renewable Grid Optimization</li>
-              <li className="hover:text-amber-400 cursor-pointer transition-colors">Autonomous Automation Edge</li>
+              <li className="hover:text-amber-400 cursor-pointer transition-colors duration-300 hover:translate-x-1">Cognitive Agriculture</li>
+              <li className="hover:text-amber-400 cursor-pointer transition-colors duration-300 hover:translate-x-1">Digital Medical Telemetry</li>
+              <li className="hover:text-amber-400 cursor-pointer transition-colors duration-300 hover:translate-x-1">Renewable Grid Optimization</li>
+              <li className="hover:text-amber-400 cursor-pointer transition-colors duration-300 hover:translate-x-1">Autonomous Automation Edge</li>
             </ul>
           </div>
 
@@ -72,7 +72,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <a
                 href="mailto:contact@harvionix.tech"
-                className="text-xs font-mono font-semibold text-amber-400 hover:text-white border border-amber-500/30 px-4 py-2 bg-amber-500/5 hover:bg-amber-400/10 rounded-full transition-all duration-300"
+                className="text-xs font-mono font-semibold text-amber-400 hover:text-white border border-amber-500/30 hover:border-amber-400/60 px-4 py-2 bg-amber-500/5 hover:bg-amber-400/10 rounded-full transition-all duration-300 hover:shadow-[0_0_15px_rgba(245,158,11,0.3)] transform hover:scale-105"
                 onClick={(e) => e.preventDefault()}
               >
                 Inquire Portal
@@ -96,7 +96,7 @@ export default function Footer() {
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="w-10 h-10 rounded-full bg-zinc-950 border border-white/5 flex items-center justify-center text-zinc-400 hover:text-amber-400 hover:border-amber-400/40 hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] transition-all duration-300 transform hover:-translate-y-1"
+              className="w-10 h-10 rounded-full bg-zinc-950 border border-white/5 hover:border-amber-400/40 flex items-center justify-center text-zinc-400 hover:text-amber-400 hover:shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
               aria-label="Twitter profile"
             >
               <Twitter className="w-4 h-4" />
@@ -106,7 +106,7 @@ export default function Footer() {
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="w-10 h-10 rounded-full bg-zinc-950 border border-white/5 flex items-center justify-center text-zinc-400 hover:text-amber-400 hover:border-amber-400/40 hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] transition-all duration-300 transform hover:-translate-y-1"
+              className="w-10 h-10 rounded-full bg-zinc-950 border border-white/5 hover:border-amber-400/40 flex items-center justify-center text-zinc-400 hover:text-amber-400 hover:shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
               aria-label="LinkedIn profile"
             >
               <Linkedin className="w-4 h-4" />
@@ -116,7 +116,7 @@ export default function Footer() {
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="w-10 h-10 rounded-full bg-zinc-950 border border-white/5 flex items-center justify-center text-zinc-400 hover:text-amber-400 hover:border-amber-400/40 hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] transition-all duration-300 transform hover:-translate-y-1"
+              className="w-10 h-10 rounded-full bg-zinc-950 border border-white/5 hover:border-amber-400/40 flex items-center justify-center text-zinc-400 hover:text-amber-400 hover:shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
               aria-label="GitHub integration"
             >
               <Github className="w-4 h-4" />
@@ -126,7 +126,7 @@ export default function Footer() {
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="w-10 h-10 rounded-full bg-zinc-950 border border-white/5 flex items-center justify-center text-zinc-400 hover:text-amber-400 hover:border-amber-400/40 hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] transition-all duration-300 transform hover:-translate-y-1"
+              className="w-10 h-10 rounded-full bg-zinc-950 border border-white/5 hover:border-amber-400/40 flex items-center justify-center text-zinc-400 hover:text-amber-400 hover:shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
               aria-label="Network stats"
             >
               <Globe className="w-4 h-4" />
@@ -137,7 +137,7 @@ export default function Footer() {
           <button
             onClick={handleScrollToTop}
             id="scroll-to-top"
-            className="p-3 text-zinc-400 hover:text-white hover:bg-zinc-800/40 rounded-lg transition-all"
+            className="p-3 text-zinc-400 hover:text-amber-400 hover:bg-amber-500/10 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] transform hover:scale-110"
             aria-label="Scroll to top of company page"
           >
             <ArrowUp className="w-5 h-5 animate-bounce" />

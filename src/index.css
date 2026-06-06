@@ -25,6 +25,44 @@
   }
 }
 
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3), inset 0 0 20px rgba(245, 158, 11, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.5), inset 0 0 30px rgba(245, 158, 11, 0.15);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .animate-float-1 {
   animation: float-gentle 6s ease-in-out infinite;
 }
@@ -41,6 +79,23 @@
   animation: float-slower 9s ease-in-out infinite 2s;
 }
 
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+
 /* Hide scrollbars for cinematic layout */
 ::-webkit-scrollbar {
   width: 8px;
@@ -54,8 +109,33 @@
 ::-webkit-scrollbar-thumb {
   background: #27272a;
   border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #d4af37;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  @apply transition-colors duration-300;
+}
+
+button, a, input, textarea {
+  @apply transition-all duration-300;
+}
+
+/* Text selection polish */
+::selection {
+  @apply bg-amber-400 text-black;
+}
+
+/* Focus states for better accessibility */
+:focus-visible {
+  @apply outline-amber-400 outline-offset-2;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }

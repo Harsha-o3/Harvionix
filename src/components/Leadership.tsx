@@ -99,16 +99,13 @@ export default function Leadership() {
               </div>
 
               {/* Status and telemetry bottom row */}
-              <div className="pt-6 mt-8 border-t border-white/5 flex items-center justify-between text-[10px] font-mono text-zinc-600">
-                <span className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                  CO_FOUNDER
-                </span>
-                <span className="group-hover:text-amber-400 transition-colors">
-                  SECURE_COMMS_ON
-                </span>
+                            <div className="pt-8 mt-auto">
+                <div className="flex items-center justify-between text-[10px] font-mono text-zinc-600">
+                  <span></span>
+                  <span className="text-zinc-500 group-hover:text-amber-400 transition-colors">
+                  </span>
+                </div>
               </div>
-
             </div>
           ))}
 

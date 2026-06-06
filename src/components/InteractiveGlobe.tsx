@@ -12,19 +12,19 @@ export default function InteractiveGlobe() {
       className="relative w-72 h-72 sm:w-80 sm:h-80 mx-auto flex items-center justify-center select-none"
     >
       {/* Cinematic backing glows */}
-      <div className="absolute w-[240px] h-[240px] rounded-full bg-amber-500/10 blur-3xl" />
-      <div className="absolute w-[180px] h-[180px] rounded-full bg-blue-500/5 blur-2xl" />
+      {/* <div className="absolute w-[240px] h-[240px] rounded-full bg-amber-500/10 blur-3xl" />
+      <div className="absolute w-[180px] h-[180px] rounded-full bg-blue-500/5 blur-2xl" /> */}
 
       {/* Holographic orbital rings */}
-      <div className="absolute inset-0 rounded-full border border-dashed border-amber-500/10 animate-[spin_20s_linear_infinite]" />
-      <div className="absolute inset-4 rounded-full border border-dashed border-zinc-500/10 animate-[spin_35s_linear_infinite_reverse]" />
-      <div className="absolute inset-8 rounded-full border border-white/5" />
+      <div className="absolute inset-0 rounded-full border border-dashed border-amber-500/40 animate-[spin_20s_linear_infinite]" />
+      <div className="absolute inset-4 rounded-full border border-dashed border-amber-500/40 animate-[spin_35s_linear_infinite_reverse]" />
+      <div className="absolute inset-8 rounded-full border border-dashed border-amber-500/40" />
 
       {/* Primary Glowing Sphere container */}
-      <div className="relative w-56 h-56 rounded-full bg-zinc-950/40 border border-amber-500/20 flex items-center justify-center overflow-hidden shadow-[0_0_50px_rgba(245,158,11,0.12)]">
+      <div className="relative w-56 h-56 rounded-full bg-transparent border-amber-500/20 flex items-center justify-center overflow-hidden">
         {/* Shading reflection overlays */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-black via-zinc-950/20 to-amber-500/10 mix-blend-color-dodge z-10" />
-        <div className="absolute inset-[1px] rounded-full bg-gradient-to-b from-transparent via-black/80 to-black z-10" />
+        {/* <div className="absolute inset-0 bg-gradient-to-tr from-black via-zinc-950/20 to-amber-500/10 mix-blend-color-dodge z-10" />
+        <div className="absolute inset-[1px] rounded-full bg-gradient-to-b from-transparent via-black/80 to-black z-10" /> */}
 
         {/* Global wireframe grid lines using animated SVG */}
         <svg
@@ -62,12 +62,6 @@ export default function InteractiveGlobe() {
       {/* Decorative vertical crosshairs */}
       <div className="absolute left-1/2 top-0 bottom-0 w-[0.5px] bg-gradient-to-b from-transparent via-amber-500/15 to-transparent pointer-events-none" />
       <div className="absolute top-1/2 left-0 right-0 h-[0.5px] bg-gradient-to-r from-transparent via-amber-500/15 to-transparent pointer-events-none" />
-
-      {/* Floating coordinates dashboard */}
-      <div className="absolute -bottom-2 bg-black/60 backdrop-blur-md border border-white/5 px-2.5 py-1 rounded text-[9px] font-mono text-zinc-400 tracking-widest uppercase flex items-center gap-1.5 shadow-md">
-        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-        SYS_GLOBE: ACTIVE
-      </div>
     </div>
   );
 }

@@ -90,16 +90,12 @@ export default function CompanyValues() {
           </div>
 
           {/* Glowing horizontal statistics dashboard */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {STATS_DATA.map((stat, i) => (
               <div
                 key={stat.label}
                 className="relative p-6 rounded-xl bg-zinc-950 border border-white/5 hover:border-white/10 flex flex-col justify-between hover:bg-black transition-all duration-500 text-center sm:text-left h-full"
               >
-                {/* Top tracking line index */}
-                <span className="text-[9px] font-mono text-zinc-600 block mb-2">
-                  METRIC_0{i + 1}
-                </span>
 
                 <div className="space-y-2">
                   {/* Scalar Number Indicator */}

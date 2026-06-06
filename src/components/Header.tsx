@@ -88,9 +88,10 @@ export default function Header() {
                 key={item.target}
                 id={`nav-link-${item.target}`}
                 onClick={() => scrollToSection(item.target)}
-                className="px-4 py-1.5 text-[13px] font-sans font-medium text-zinc-300 hover:text-amber-400 tracking-wide hover:bg-white/5 rounded-full transition-all duration-300"
+                className="px-4 py-1.5 text-[13px] font-sans font-medium text-zinc-300 hover:text-amber-400 tracking-wide hover:bg-white/5 rounded-full transition-all duration-300 relative group"
               >
                 {item.label}
+                <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-amber-400 to-transparent group-hover:w-full transition-all duration-300" />
               </button>
             ))}
           </nav>
@@ -100,10 +101,10 @@ export default function Header() {
             <button
               id="header-cta"
               onClick={() => scrollToSection("leaders")}
-              className="px-5 py-2 text-[12px] font-mono tracking-wider text-amber-400 hover:text-white border border-amber-500/30 hover:border-amber-400 rounded-full bg-amber-500/5 hover:bg-amber-400/10 hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] transition-all duration-300 flex items-center gap-1.5"
+              className="px-5 py-2 text-[12px] font-mono tracking-wider text-amber-400 hover:text-white border border-amber-500/30 hover:border-amber-400/60 rounded-full bg-amber-500/5 hover:bg-amber-400/10 hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] transition-all duration-300 flex items-center gap-1.5 transform hover:scale-105"
             >
               Partner Program
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>
           </div>
 

@@ -5,6 +5,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import Header from "./components/Header";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 import BackgroundParticles from "./components/BackgroundParticles";
 import WhoWeAre from "./components/WhoWeAre";
 import IndustriesGrid from "./components/IndustriesGrid";
@@ -19,6 +21,13 @@ import harvionixLogo from "./assets/images/harvionix_logo_1780640461111.png";
 import { ArrowDown, ArrowUpRight, Sparkles } from "lucide-react";
 
 export default function App() {
+  const [showLogin, setShowLogin] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
+
+  const openLogin = () => setShowLogin(true);
+  const closeLogin = () => setShowLogin(false);
+  const openSignup = () => setShowSignup(true);
+  const closeSignup = () => setShowSignup(false);
   const [mousePos, setMousePos] = useState({ x: -1000, y: -1000 });
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const heroRef = useRef<HTMLElement | null>(null);
@@ -84,7 +93,7 @@ export default function App() {
       <BackgroundParticles />
 
       {/* HEADER */}
-      <Header />
+      <Header onOpenLogin={openLogin} onOpenSignup={openSignup} />
 
       {/* ══════════════════════════════════════════════
           HERO IMAGE SECTION — pure full-screen background,
@@ -253,6 +262,9 @@ export default function App() {
 
       {/* FOOTER */}
       <Footer />
+
+      {showLogin && <Login onClose={closeLogin} />}
+      {showSignup && <Signup onClose={closeSignup} />}
 
     </div>
   );

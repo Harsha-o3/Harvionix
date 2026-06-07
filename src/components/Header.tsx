@@ -4,9 +4,13 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { Menu, X, ArrowUpRight, Shield, Globe, Award } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 
-export default function Header() {
+type Props = {
+  onOpenLogin?: () => void;
+  onOpenSignup?: () => void;
+};
+export default function Header({ onOpenLogin, onOpenSignup }: Props) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -96,7 +100,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Actions & Partner Trigger Action */}
+          {/* Actions & Partner / Auth Triggers */}
           <div className="hidden lg:flex items-center gap-4">
             <button
               id="header-cta"
@@ -105,6 +109,20 @@ export default function Header() {
             >
               Partner Program
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </button>
+
+            <button
+              onClick={() => onOpenLogin && onOpenLogin()}
+              className="px-4 py-2 text-sm rounded-full text-zinc-200 hover:text-white border border-white/10 bg-white/2 transition"
+            >
+              Sign In
+            </button>
+
+            <button
+              onClick={() => onOpenSignup && onOpenSignup()}
+              className="px-4 py-2 text-sm rounded-full bg-amber-400 text-black font-bold hover:brightness-95 transition"
+            >
+              Sign Up
             </button>
           </div>
 
@@ -152,14 +170,21 @@ export default function Header() {
             ))}
           </nav>
 
-          <button
-            id="mobile-header-cta"
-            onClick={() => scrollToSection("leaders")}
-            className="mt-4 px-8 py-3 text-sm font-mono tracking-widest text-amber-400 border border-amber-500/30 rounded-full bg-amber-500/5 hover:bg-amber-400/20 transition-all flex items-center gap-2"
-          >
-            Partner With Us
-            <ArrowUpRight className="w-4 h-4" />
-          </button>
+          <div className="mt-4 flex flex-col gap-3">
+            <button
+              id="mobile-partner-cta"
+              onClick={() => scrollToSection("leaders")}
+              className="px-8 py-3 text-sm font-mono tracking-widest text-amber-400 border border-amber-500/30 rounded-full bg-amber-500/5 hover:bg-amber-400/20 transition-all flex items-center gap-2"
+            >
+              Partner With Us
+              <ArrowUpRight className="w-4 h-4" />
+            </button>
+
+            <div className="flex gap-3">
+              <button onClick={() => { setMobileMenuOpen(false); onOpenLogin && onOpenLogin(); }} className="flex-1 px-6 py-3 rounded-full bg-white/5 text-zinc-200">Sign In</button>
+              <button onClick={() => { setMobileMenuOpen(false); onOpenSignup && onOpenSignup(); }} className="flex-1 px-6 py-3 rounded-full bg-amber-400 text-black font-bold">Sign Up</button>
+            </div>
+          </div>
         </div>
       </div>
     </>

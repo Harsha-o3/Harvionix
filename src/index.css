@@ -139,3 +139,56 @@ button, a, input, textarea {
 html {
   scroll-behavior: smooth;
 }
+
+/* Custom premium animations for landing page background */
+@keyframes spotlight-pulse {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(1) translate(0px, 0px);
+    filter: blur(100px);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.15) translate(15px, 10px);
+    filter: blur(120px);
+  }
+}
+
+@keyframes glint-sweep {
+  0% {
+    transform: translateX(-200%) skewX(-30deg);
+  }
+  25%, 100% {
+    transform: translateX(200%) skewX(-30deg);
+  }
+}
+
+@keyframes float-dust {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.35;
+  }
+}
+
+.animate-spotlight-pulse {
+  animation: spotlight-pulse 12s ease-in-out infinite;
+}
+
+.animate-glint {
+  animation: glint-sweep 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.animate-dust {
+  animation: float-dust 15s ease-in-out infinite;
+}
+
+/* 3D card tilt smooth transition */
+.tilt-element {
+  transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+

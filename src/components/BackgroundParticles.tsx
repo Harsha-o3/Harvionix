@@ -169,7 +169,7 @@ export default function BackgroundParticles() {
     <canvas
       ref={canvasRef}
       id="bg-canvas-particles"
-      className="absolute inset-0 block pointer-events-none z-0"
+      className="fixed inset-0 block pointer-events-none z-[5]"
       style={{ mixBlendMode: "screen" }}
     />
   );

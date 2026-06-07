@@ -111,8 +111,8 @@ export default function App() {
             <img
               src={harvionixLogo}
               alt="HARVIONIX Corporate Background — Golden Eagle Crest on Dark Textured Background"
-              className="max-w-[80%] max-h-[80%] object-contain rounded-[40px] shadow-[0_35px_120px_rgba(0,0,0,0.35)]"
-              style={{ objectPosition: "center 42%" }}
+              className="max-w-[70%] max-h-[70%] object-contain rounded-[40px] shadow-[0_35px_120px_rgba(0,0,0,0.35)]"
+              style={{ objectPosition: "center 42%", transform: "translateY(22px)" }}
             />
             <div className="absolute inset-0 rounded-[40px] shadow-[inset_0_0_220px_110px_rgba(0,0,0,0.5)]" />
           </div>
@@ -190,7 +190,7 @@ export default function App() {
       ══════════════════════════════════════════════ */}
       <div
         id="hero-content"
-        className="relative bg-black flex flex-col items-center text-center gap-4 px-6 pt-6 pb-12 -mt-16 z-30"
+        className="relative bg-black flex flex-col items-center text-center gap-4 px-6 pt-6 pb-12 -mt-28 z-30"
       >
         {/* Tagline */}
         <p className="text-sm sm:text-base font-mono text-amber-400 font-bold uppercase tracking-[0.2em] drop-shadow-[0_2px_14px_rgba(212,175,55,0.5)]">

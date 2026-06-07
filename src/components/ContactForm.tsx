@@ -11,35 +11,28 @@ export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
-    
-    try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
 
-      if (response.ok) {
-        setStatus('SUCCESS');
-        form.reset();
-        setTimeout(() => setStatus(''), 5000);
-      } else {
-        setStatus('ERROR');
-        setTimeout(() => setStatus(''), 5000);
-      }
-    } catch (error) {
-      setStatus('ERROR');
-      setTimeout(() => setStatus(''), 5000);
-    } finally {
-      setIsLoading(false);
-    }
+    const name = (data.get('name') as string) || '';
+    const email = (data.get('email') as string) || '';
+    const message = (data.get('message') as string) || '';
+
+    const subject = `Website Inquiry from ${name || email || 'Visitor'}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const mailto = `mailto:harvionix.info@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open user's email client with prefilled recipient, subject and body
+    window.location.href = mailto;
+
+    // Provide immediate UI feedback
+    setIsLoading(false);
+    setStatus('SUCCESS');
+    form.reset();
+    setTimeout(() => setStatus(''), 5000);
   };
 
   return (

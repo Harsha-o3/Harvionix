@@ -25,10 +25,13 @@ export default function ContactForm() {
     const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
     const mailto = `mailto:harvionix.info@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Open user's email client with prefilled recipient, subject and body
-    window.location.href = mailto;
+    const anchor = document.createElement('a');
+    anchor.href = mailto;
+    anchor.style.display = 'none';
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
 
-    // Provide immediate UI feedback
     setIsLoading(false);
     setStatus('SUCCESS');
     form.reset();

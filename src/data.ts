@@ -145,33 +145,33 @@ export const PROJECTS_DATA: Project[] = [
 export const LEADERS_DATA: Leader[] = [
   {
     name: "Chekuri Harsha Vardhan",
-    role: "Founder & Chief Executive Officer (CEO)",
+    role: "Founder",
     description: "Visionary leader driving innovation, strategy, partnerships, and organizational growth at HARVIONIX.",
-    initials: "CHV"
+    initials: "CH"
   },
   {
     name: "Mohan Krishna Thalla",
-    role: "Co-Founder & Chief Technology Officer (CTO)",
+    role: "Chief Technology Officer (CTO)",
     description: "Leading technology architecture, AI innovation, and software engineering excellence across all platform divisions.",
-    initials: "MKT"
+    initials: "T"
   },
   {
     name: "Rakesh Kollipaka",
-    role: "Co-Founder & Chief Product Officer (CPO)",
+    role: "Chief Product Officer (CPO)",
     description: "Responsible for global product innovation, human-centered user experience, and aesthetic design excellence.",
-    initials: "RK"
+    initials: "K"
   },
   {
     name: "Kandimulla Sruthilaya",
-    role: "Chief Operations Officer (COO) & HR",
+    role: "Chief Operations Officer (COO)",
     description: "Managing operational pipelines, rigorous execution frameworks, agile project delivery, and overall organizational efficiency.",
-    initials: "KS"
+    initials: "K"
   },
   {
     name: "Shaik Sameer",
     role: "Chief Marketing Officer (CMO)",
     description: "Driving brand growth, global marketing strategy, enterprise client acquisition, and developer community engagement.",
-    initials: "SS"
+    initials: "S"
   }
 ];
 

@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Column 1: Info and Tagline block */}
-          <div className="lg:col-span- così lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-6">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-tr from-amber-500/20 via-yellow-500/10 to-transparent border border-amber-400/40">
                 <span className="text-amber-400 font-serif font-black text-xl">H</span>

@@ -162,12 +162,6 @@ export const LEADERS_DATA: Leader[] = [
     initials: "K"
   },
   {
-    name: "Kandimulla Sruthilaya",
-    role: "Chief Operations Officer (COO)",
-    description: "Managing operational pipelines, rigorous execution frameworks, agile project delivery, and overall organizational efficiency.",
-    initials: "K"
-  },
-  {
     name: "Shaik Sameer",
     role: "Chief Marketing Officer (CMO)",
     description: "Driving brand growth, global marketing strategy, enterprise client acquisition, and developer community engagement.",
